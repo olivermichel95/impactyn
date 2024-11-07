@@ -1,0 +1,116 @@
+.tab.tab-style-2 {
+    .nav {
+        .nav-item {
+            flex: 0 0 25%;
+            &:not(:last-child) {
+                .nav-link {
+                    width: 100%;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 25%;
+                        @include transform(translateY(-50% * $transform-direction));
+                        #{$start-direction}: calc(50% + 34px);
+                        height: 1px;
+                        width: calc(75%);
+                        background: $color-grey-56;
+                    }
+                }
+            }
+            .nav-link {
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .step-number {
+                    padding: 8px 14px;
+                    color: $color-grey-56;
+                    border: 2px solid $color-grey-56;
+                    border-radius: 6px;
+                    margin-bottom: 16px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    position: relative;
+                }
+                .step-title {
+                    color: $color-black-10;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-align: center;
+                }
+                &.active {
+                    background: transparent;
+                    .step-number,
+                    .step-title {
+                        color: $color-blue-3;
+                        font-weight: 700;
+                    }
+                    .step-number {
+                        border: 2px solid $color-blue-3;
+                    }
+                }
+                &.completed {
+                    .step-number {
+                        position: relative;
+                        border: 2px solid transparent;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            #{$start-direction}: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: $color-blue-3;
+                            border-radius: 6px;
+                            background-image: url("../images/icons/check-white.svg");
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: 24px;
+                        }
+                    }
+                    &::after {
+                        height: 2px;
+                        background: $color-blue-3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    .tab.tab-style-2 {
+        .nav {
+            .nav-item {
+                &:not(:last-child) {
+                    .nav-link {
+                        &::after {
+                            top: 20%;
+                            #{$start-direction}: calc(50% + 24px);
+                            width: 45%;
+                        }
+                    }
+                }
+                .nav-link {
+                    .step-number {
+                        padding: 6px 12px;
+                        margin-bottom: 16px;
+                        font-size: 14px;
+                    }
+                    .step-title {
+                        font-size: 14px;
+                    }
+                    &.completed {
+                        .step-number {
+                            &::before {
+                                background-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

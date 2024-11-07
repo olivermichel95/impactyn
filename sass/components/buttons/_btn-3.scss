@@ -1,0 +1,18 @@
+.btn-style-3 {
+    padding: 0;
+    background: $color-grey-7;
+    border-top-#{$end-direction}-radius: 5px;
+    border-bottom-#{$start-direction}-radius: 5px;
+    border-top-#{$start-direction}-radius: 0;
+    border-bottom-#{$end-direction}-radius: 0;
+    width: 25px;
+    height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+        width: 14px;
+        height: 14px;
+        color: $color-white;
+    }
+}

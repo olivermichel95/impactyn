@@ -1,0 +1,91 @@
+.pagination-style-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    .pagination-text {
+        font-size: 16px;
+        font-weight: 400;
+        color: $color-grey-31;
+        margin-bottom: 0;
+    }
+    nav {
+        .pagination {
+            .page-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:not(:last-child) {
+                    margin-right: 12px;
+                }
+                .page-link {
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    font-size: 16px;
+                    color: $color-grey-31;
+                    padding: 12px 16px;
+                    svg {
+                        width: 14px;
+                        height: 14px;
+                        color: $color-grey-31;
+                    }
+                }
+                &.active {
+                    .page-link {
+                        border-radius: 8px;
+                        border: 1px solid $color-grey-36;
+                        background-color: $color-white !important;
+                        color: $color-red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    .pagination-style-1 {
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        .pagination-text {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+        nav {
+            .pagination {
+                flex-wrap: wrap;
+                .page-item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &:not(:last-child) {
+                        margin-right: 12px;
+                    }
+                    .page-link {
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                        font-size: 16px;
+                        color: $color-grey-31;
+                        padding: 12px 16px;
+                        svg {
+                            width: 14px;
+                            height: 14px;
+                            color: $color-grey-31;
+                        }
+                    }
+                    &.active {
+                        .page-link {
+                            border-radius: 8px;
+                            border: 1px solid $color-grey-36;
+                            background-color: $color-white !important;
+                            color: $color-red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

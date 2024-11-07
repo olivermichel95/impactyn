@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.ico" />
+
+    <title>Cards Page</title>
+    <!-- BASE CSS-->
+    <link rel="stylesheet" href="../vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- END BASE CSS-->
+
+    <!-- PAGE CSS-->
+    <style>
+        .page-title {
+            font-size: 40px;
+            color: #ED202E;
+            font-weight: 700;
+        }
+    </style>
+    <!-- END PAGE CCS-->
+</head>
+
+<body>
+    <div class="pre-loader">
+        <div class="pre-loader-object"></div>
+    </div>
+
+    <main>
+        <!--BODY-->
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <h1 class="page-title text-center">Cards</h1>
+                </div>
+                <div class="col-12 d-flex justify-content-end mb-4">
+                    <a href="ui-components.html" class="btn btn-style-1">Back to Ui Components</a>
+                </div>
+                <!-- card 1 -->
+                <div class="col-6 mb-3">
+                    <div class="card card-1 chart chart-1" data-data='{"testt test":{"number":20,"color":"#6668BB"},"Instagram":{"number":50,"color":"#F36873"},"Snapchat":{"number":30,"color":"#EAE850"}}'>
+                        <div class="card-header">
+                            <span class="card-title">Card 1 Title</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <div class="chart-info-container">
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex justify-content-center">
+                                    <canvas class="pie-chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card 1 -->
+                <!-- card 2 -->
+                <div class="col-6 mb-3">
+                    <div class="card card-2 chart chart-2" data-data='{"facebook":{"number":20,"color":"#6668BB"},"Instagram":{"number":50,"color":"#F36873"},"Snapchat":{"number":30,"color":"#EAE850"}}'>
+                        <div class="card-header">
+                            <span class="card-title">Card 2 Title</span>
+                        </div>
+                        <div class="card-body">
+                            <canvas class="horizontal-graph-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card 2 -->
+                <!-- card 3 -->
+                <div class="col-6 mb-3">
+                    <div class="card card-3 chart chart-3" data-data='{"Remaining":{"number":20,"color":"#ED202E"},"Completed":{"number":50,"color":"#00ABE0"}}'>
+                        <div class="card-header mb-3">
+                            <span class="card-title">Chart 3</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <canvas class="doughnut-chart"></canvas>
+                                </div>
+                                <div class="col-6">
+                                    <div class="chart-info">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 5 -->
+                <div class="col-6 mb-3">
+                    <div class="card card-5">
+                        <p class="card-title">Total Reach</p>
+                        <p class="description mb-0">30020</p>
+                    </div>
+                </div>
+                <!-- end card 5 -->
+                <!-- card 6 -->
+                <div class="col-6 mb-3">
+                    <a href="#" class="card card-6 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+                        <span class="card-title">All Campaigns</span>
+                        <i class="convert-svg" data-src="../images/icons/all-campaigns.svg"></i>
+                    </a>
+                </div>
+                <!-- end card 6 -->
+                <!-- end card 3 -->
+                <!-- card 8 -->
+                <div class="col-6 mb-3">
+                    <div class="card card-8">
+                        <div class="card-img w-100">
+                            <img class="lazy" data-src="https://via.placeholder.com/470x260" alt="">
+                            <div class="img-text-container">
+                                <span class="name">Pepsi</span>
+                                <span class="status">Pending...</span>
+                            </div>
+                        </div>
+                        <h6 class="card-title">Card Title</h6>
+                        <div class="dates-container">
+                            <div class="date">
+                                <p class="date-status">START</p>
+                                <p class="date-text mb-0">02 Feb 2021</p>
+                            </div>
+                            <div class="date">
+                                <p class="date-status">END</p>
+                                <p class="date-text mb-0">18 Feb 2021</p>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <!-- progress item -->
+                            <div class="progress-item">
+                                <p class="mb-0 label">Reach</p>
+                                <div class="progress progress-style-1">
+                                    <div class="progress-bar w-50" role="progressbar" aria-valuenow="400" aria-valuemin="300" aria-valuemax="500"></div>
+                                </div>
+                                <div class="numbers">
+                                    <span class="min">300</span> / <span class="max">500</span>
+                                </div>
+                            </div>
+                            <!-- end progress item -->
+                            <!-- progress item -->
+                            <div class="progress-item">
+                                <p class="mb-0 label">Budget</p>
+                                <div class="progress progress-style-1">
+                                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="5" aria-valuemax="15"></div>
+                                </div>
+                                <div class="numbers">
+                                    <span class="min">5.4K</span> / <span class="max">15K</span>
+                                </div>
+                            </div>
+                            <!-- end progress item -->
+                            <!-- progress item -->
+                            <div class="progress-item">
+                                <p class="mb-0 label">Engagement</p>
+                                <div class="progress progress-style-1">
+                                    <div class="progress-bar w-25" role="progressbar" aria-valuenow="23" aria-valuemin="20" aria-valuemax="30"></div>
+                                </div>
+                                <div class="numbers">
+                                    <span class="min">20.4K</span> / <span class="max">30K</span>
+                                </div>
+                            </div>
+                            <!-- end progress item -->
+                        </div>
+                        <a href="campaign-details.html" class="btn btn-style-1 w-100 mb-4">OPEN</a>
+                    </div>
+                </div>
+                <!-- end card 8 -->
+            </div>
+        </div>
+        <!--END BODY-->
+    </main>
+
+
+
+    <!--FOOTER-->
+    <footer>
+    </footer>
+    <!--END FOOTER-->
+
+    <!-- BASE JS-->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendors/jquery-validation/jquery.validate.min.js"></script>
+    <script src="../vendors/jquery.lazy/jquery.lazy.min.js"></script>
+    <script src="../js/app.js"></script>
+    <!-- END BASE JS-->
+
+    <!-- PAGE JS-->
+    <script src="../vendors/chart-js/chart.min.js"></script>
+    <script src="../js/charts.js"></script>
+    <!-- END PAGE JS-->
+
+</body>
+
+</html>

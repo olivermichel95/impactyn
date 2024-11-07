@@ -1,0 +1,14 @@
+#statistics_page {
+    .page-title {
+        @include page-title();
+        margin-bottom: 0;
+    }
+}
+
+@include media-breakpoint-md {
+    #statistics_page {
+        .page-title {
+            margin-bottom: 20px;
+        }
+    }
+}

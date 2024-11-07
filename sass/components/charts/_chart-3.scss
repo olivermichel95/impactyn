@@ -1,0 +1,70 @@
+.chart.chart-3 {
+    .doughnut-chart {
+        width: 220px !important;
+        height: 220px !important;
+    }
+    .chart-info {
+        .info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+            .color {
+                width: 14px;
+                height: 14px;
+                background-color: $color-red;
+            }
+            .label {
+                font-size: 16px;
+                font-weight: 700;
+                color: $color-grey-37;
+            }
+            .number {
+                font-weight: 400;
+                font-size: 16px;
+                color: $color-red;
+            }
+            .currency {
+                font-size: 16px;
+                font-weight: 400;
+                color: $color-grey-37;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    .chart.chart-3 {
+        .doughnut-chart {
+            width: 100px !important;
+            height: 100px !important;
+        }
+        .chart-info {
+            .info {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                .color {
+                    width: 6px;
+                    height: 6px;
+                    margin-#{$end-direction}: 10px;
+                }
+                .label {
+                    flex: 0 0 80%;
+                    font-size: 14px;
+                    margin-bottom: 12px;
+                }
+                .number {
+                    font-size: 14px;
+                    margin-#{$end-direction}: 10px;
+                }
+                .currency {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

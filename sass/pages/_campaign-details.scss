@@ -1,0 +1,591 @@
+#campaigns_details_page_container {
+    .page-title {
+        @include page-title();
+    }
+    .desktop-general-info-container {
+        height: 95px;
+        background: $color-white;
+        width: 100%;
+        .infos-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            // justify-content: space-between;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 100%;
+            .info {
+                display: flex;
+                align-items: center;
+                flex: 0 0 20%;
+                .info-title {
+                    color: $color-grey-37;
+                    font-size: 14px;
+                    font-weight: 700;
+                    margin-#{$end-direction}: 20px;
+                    white-space: nowrap;
+                }
+                &.date {
+                    .info-description {
+                        color: $color-black-7;
+                        border-#{$end-direction}: 1px solid $color-grey-34;
+                        padding-#{$end-direction}: 20px;
+                        height: 100%;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 7;
+                    }
+                }
+                &.status {
+                    .info-description {
+                        color: $color-green-3;
+                        font-weight: 700;
+                        font-size: 14px;
+                    }
+                }
+                &.progress-bar-section {
+                    flex: 0 0 40%;
+                    .progress {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .page-subtitle-container {
+        @include page-subtitle();
+        .page-description {
+            padding: 16px;
+            .description-text {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 38px;
+                color: $color-grey-7;
+            }
+        }
+        .budget-section {
+            padding: 24px;
+            .money-section {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 2px solid $color-grey-10;
+                padding-bottom: 16px;
+                margin-bottom: 20px;
+                .amount {
+                    color: $color-grey-39;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+            }
+        }
+        .images-section {
+            .slider-section {
+                position: relative;
+                background: $color-grey-40;
+                height: 220px;
+                .swiper-container {
+                    padding-#{$start-direction}: 150px;
+                    padding-#{$end-direction}: 150px;
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                }
+                .slider-buttons {
+                    position: absolute;
+                    top: 50%;
+                    @include transform(translateY(-50% * $transform-direction));
+                    width: 100%;
+                    z-index: 5;
+                    button {
+                        padding: 0;
+                        width: 18px;
+                        height: 18px;
+                        position: absolute;
+                        svg {
+                            width: 100%;
+                            height: 100%;
+                        }
+                        &.swiper-btn-prev {
+                            left: 30px;
+                        }
+                        &.swiper-btn-next {
+                            right: 30px;
+                        }
+                    }
+                }
+            }
+            .thumbs-section {
+                background: $color-white;
+                padding: 30px;
+                .swiper-container {
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            width: 100px;
+                            height: 100px;
+                            cursor: pointer;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 6px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .social-media-details-section {
+        #social_media_accordion {
+            .card {
+                border: none;
+                background: transparent;
+                .card-header {
+                    border-bottom: 1px solid $color-grey-10;
+                    background: $color-white;
+                    border: none;
+                    padding: 20px;
+                    margin-bottom: 20px;
+                    .btn-link {
+                        padding: 0;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                        .button-info {
+                            display: flex;
+                            align-items: center;
+                            .social-media-icon {
+                                width: 50px;
+                                height: 50px;
+                                margin-#{$end-direction}: 25px;
+                            }
+                            .button-text {
+                                text-align: $start-direction;
+                                .title {
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    margin-bottom: 16px;
+                                }
+                                .description {
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    color: $color-grey-43;
+                                }
+                                &.facebook-text {
+                                    .title {
+                                        color: $color-facebook-blue;
+                                    }
+                                }
+                                &.instagram-text {
+                                    .title {
+                                        color: $color-instagram-pink;
+                                    }
+                                }
+                            }
+                        }
+                        .btn-icon {
+                            width: 24px;
+                            height: 24px;
+                            color: $color-grey-42;
+                            @include transition(all .3s ease-in-out);
+                        }
+                        &:not(.collapsed) {
+                            .btn-icon {
+                                @include transform(rotate(90deg));
+                            }
+                        }
+                    }
+                }
+                .card-body {
+                    padding: 0;
+                    .body-item-container {
+                        background: $color-white;
+                        border-radius: 10px;
+                        padding: 20px 50px;
+                        &:not(:last-child) {
+                            margin-bottom: 16px;
+                        }
+                        display: flex;
+                        align-items: center;
+                    }
+                    .budget-section {
+                        display: flex;
+                        align-items: center;
+                        .section-title {
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: $color-black-8;
+                            border-#{$end-direction}: 1px solid $color-grey-32;
+                            line-height: 7;
+                            padding-#{$end-direction}: 75px;
+                            margin-#{$end-direction}: 25px;
+                        }
+                        .budget-info-container {
+                            &:not(:last-child) {
+                                border-#{$end-direction}: 1px solid $color-grey-32;
+                                padding-#{$end-direction}: 75px;
+                                margin-#{$end-direction}: 25px;
+                            }
+                            .info-text {
+                                font-size: 16px;
+                                font-weight: 400;
+                                color: $color-grey-7;
+                                margin-bottom: 30px;
+                            }
+                            .price {
+                                font-size: 18px;
+                                font-weight: 400;
+                                color: $color-orange;
+                            }
+                            &:last-child {
+                                .price {
+                                    color: $color-green-4;
+                                }
+                            }
+                        }
+                    }
+                    .item-info {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        .info-title-container {
+                            display: flex;
+                            align-items: center;
+                            svg {
+                                width: 42px;
+                                height: 42px;
+                                color: $color-grey-44;
+                                margin-#{$end-direction}: 25px;
+                            }
+                            .title {
+                                font-size: 18px;
+                                font-weight: 400;
+                                color: $color-black-8;
+                                white-space: nowrap;
+                            }
+                        }
+                        .info-number {
+                            font-size: 20px;
+                            font-weight: 400;
+                            color: $color-green-4;
+                        }
+                    }
+                    .table-section {
+                        width: 100%;
+                        .section-header {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: 50px;
+                            .section-title-container {
+                                display: flex;
+                                align-items: center;
+                                svg {
+                                    width: 55px;
+                                    height: 55px;
+                                    color: $color-grey-45;
+                                    margin-#{$end-direction}: 35px;
+                                }
+                                .section-title {
+                                    font-size: 18px;
+                                    font-weight: 400;
+                                    color: $color-black-8;
+                                }
+                            }
+                            form.table-sort-form {
+                                display: flex;
+                                align-items: center;
+                                .input-text {
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    color: $color-grey-7;
+                                    margin-#{$end-direction}: 25px;
+                                }
+                                .input-container {
+                                    position: relative;
+                                    //TODO: needs adjustment
+                                    select {
+                                        height: 42px;
+                                        @include boxShadow(inset 0px 4px 8px rgba($color-black-default, 0.09));
+                                        border-radius: 10px;
+                                        overflow: hidden;
+                                        border: 1px solid $color-grey-30;
+                                        background: $color-white-1;
+                                        min-width: 200px;
+                                        padding: 0px 20px;
+                                        border: none;
+                                        background: transparent;
+                                    }
+                                    .dropdown-icon-btn {
+                                        position: absolute;
+                                        #{$end-direction}: 20px;
+                                        top: 0;
+                                        height: 100%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        z-index: 10;
+                                        svg {
+                                            width: 18px;
+                                            height: 18px;
+                                            color: $color-grey-46;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    #campaigns_details_page_container {
+        .mobile-general-info-container {
+            .info-dates {
+                background: $color-white;
+                padding: 16px;
+                display: flex;
+                align-items: center;
+                .date {
+                    display: flex;
+                    align-items: center;
+                    &:not(:last-child) {
+                        border-#{$end-direction}: 1px solid $color-grey-34;
+                        padding-#{$end-direction}: 10px;
+                        margin-#{$end-direction}: 14px;
+                    }
+                    .date-status {
+                        font-size: 13px;
+                        font-weight: 700;
+                        color: $color-grey-37;
+                        margin-#{$end-direction}: 14px;
+                    }
+                    .date-time {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: $color-black-7;
+                    }
+                }
+            }
+            .status-container {
+                background: $color-white;
+                padding: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .title,
+                .status {
+                    font-size: 13px;
+                    font-weight: 700;
+                    color: $color-grey-37;
+                }
+            }
+            .progress-bar-container {
+                background: $color-white;
+                padding: 16px;
+                display: flex;
+                align-items: center;
+                .title {
+                    font-size: 13px;
+                    font-weight: 700;
+                    color: $color-grey-37;
+                    flex: 0 0 50%;
+                }
+                .progress {
+                    flex: 0 0 50%;
+                }
+            }
+        }
+        .page-subtitle-container {
+            .images-section {
+                .slider-section {
+                    height: 150px;
+                    .swiper-container {
+                        padding-#{$start-direction}: 0;
+                        padding-#{$end-direction}: 0;
+                    }
+                    .slider-buttons {
+                        button {
+                            svg {
+                                color: $color-white;
+                            }
+                            &.swiper-btn-prev {
+                                left: 16px;
+                            }
+                            &.swiper-btn-next {
+                                right: 16px;
+                            }
+                        }
+                    }
+                }
+                .thumbs-section {
+                    padding: 14px;
+                    .swiper-container {
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                width: 85px;
+                                height: 85px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .social-media-details-section {
+            #social_media_accordion {
+                .card {
+                    .card-header {
+                        .btn-link {
+                            .button-info {
+                                display: flex;
+                                align-items: flex-start;
+                                .social-media-icon {
+                                    width: 30px;
+                                    height: 30px;
+                                    margin-#{$end-direction}: 16px;
+                                }
+                                .button-text {
+                                    .title {
+                                        margin-bottom: 6px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .card-body {
+                        .body-item-container {
+                            padding: 20px 25px;
+                        }
+                        .budget-section {
+                            display: flex;
+                            align-items: flex-start;
+                            flex-wrap: wrap;
+                            .section-title {
+                                flex: 0 0 100%;
+                                border: none;
+                                line-height: normal;
+                                padding-#{$end-direction}: 0;
+                                margin-#{$end-direction}: 0;
+                                margin-bottom: 25px !important;
+                            }
+                            //TODO: adjust css here, make both prices on same line
+                            .budget-info-container {
+                                &:not(:last-child) {
+                                    border-#{$end-direction}: none;
+                                    padding-#{$end-direction}: 0;
+                                    margin-#{$end-direction}: 0;
+                                }
+                                padding-#{$start-direction}: 12px;
+                                border-#{$start-direction}: 1px solid $color-grey-32;
+                                flex: 0 0 50%;
+                                .info-text {
+                                    font-size: 14px;
+                                    margin-bottom: 20px;
+                                }
+                                .price {
+                                    font-size: 16px;
+                                    margin-bottom: 0 !important;
+                                }
+                            }
+                        }
+                        .item-info {
+                            .info-title-container {
+                                svg {
+                                    width: 30px;
+                                    height: 30px;
+                                    margin-#{$end-direction}: 18px;
+                                }
+                                .title {
+                                    font-size: 16px;
+                                }
+                            }
+                            .info-number {
+                                font-size: 18px;
+                            }
+                        }
+                        .table-section {
+                            .section-header {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                                margin-bottom: 25px;
+                                .section-title-container {
+                                    display: flex;
+                                    align-items: center;
+                                    margin-bottom: 20px;
+                                    svg {
+                                        width: 45px;
+                                        height: 45px;
+                                        margin-#{$end-direction}: 20px;
+                                    }
+                                    .section-title {
+                                        font-size: 16px;
+                                    }
+                                }
+                                form.table-sort-form {
+                                    display: flex;
+                                    align-items: center;
+                                    .input-text {
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        color: $color-grey-7;
+                                        margin-#{$end-direction}: 25px;
+                                    }
+                                    .input-container {
+                                        position: relative;
+                                        //TODO: needs adjustment
+                                        select {
+                                            height: 42px;
+                                            @include boxShadow(inset 0px 4px 8px rgba($color-black-default, 0.09));
+                                            border-radius: 10px;
+                                            overflow: hidden;
+                                            border: 1px solid $color-grey-30;
+                                            background: $color-white-1;
+                                            min-width: 200px;
+                                            padding: 0px 20px;
+                                            border: none;
+                                            background: transparent;
+                                        }
+                                        .dropdown-icon-btn {
+                                            position: absolute;
+                                            #{$end-direction}: 20px;
+                                            top: 0;
+                                            height: 100%;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            z-index: 10;
+                                            svg {
+                                                width: 18px;
+                                                height: 18px;
+                                                color: $color-grey-46;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+body {
+    font-family: 'Avenir LT Std';
+    background: $color-bg;
+    direction: $direction;
+    text-align: $start-direction;
+    font-size: 14px;
+    position: relative;
+}
+
+button,
+a {
+    &:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+main {
+    padding-#{$start-direction}: $side-bar-closed-width;
+}
+
+@include media-breakpoint-md {
+    main {
+        padding-#{$start-direction}: 0;
+        margin-#{$start-direction}: 0;
+    }
+}

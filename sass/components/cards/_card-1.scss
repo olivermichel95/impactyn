@@ -1,0 +1,30 @@
+.card-1 {
+    @include card-fixed-style();
+    border: none;
+    .card-body {
+        .chart-info-container {
+            .info {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 12px 0;
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-grey-32;
+                }
+                .color {
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 50%;
+                    background-color: $color-red;
+                }
+                .title,
+                .percentage {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $color-grey-33;
+                }
+            }
+        }
+    }
+}

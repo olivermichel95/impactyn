@@ -1,0 +1,9 @@
+.progress-style-3 {
+    height: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    .progress-bar {
+        background-color: $color-blue-3;
+    }
+}

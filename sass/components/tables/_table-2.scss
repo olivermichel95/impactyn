@@ -1,0 +1,81 @@
+.table.table-style-2 {
+    thead {
+        border-bottom: 2px solid $color-grey-47;
+        tr {
+            th {
+                padding-bottom: 16px;
+                border: none;
+                font-size: 14px;
+                font-weight: 700;
+                color: $color-grey-31;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                vertical-align: middle;
+                font-size: 14px;
+                font-weight: 400;
+                color: $color-black-default;
+                border: none;
+                .date {
+                    color: $color-black-6;
+                }
+                &.budget {
+                    font-weight: 700;
+                    color: $color-black-6;
+                }
+                &.text-input {
+                    width: fit-content;
+                    input {
+                        border: 1px solid $color-grey-56;
+                        border-radius: 6px;
+                        color: $color-black-9;
+                        font-weight: 700;
+                        &::placeholder {
+                            color: $color-grey-31;
+                            font-weight: 400;
+                        }
+                        &:focus {
+                            @include boxShadow(none);
+                        }
+                    }
+                }
+                &.file-input {
+                    label {
+                        cursor: pointer;
+                        margin: 0;
+                        color: $color-purple;
+                        max-width: 100%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        input {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-xl {
+    .table.table-style-2 {
+        thead {
+            tr {
+                th {
+                    font-size: 16px;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

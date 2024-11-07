@@ -1,0 +1,51 @@
+.input-style-4 {
+    label {
+        font-size: 14px;
+        color: $color-black-11;
+        margin-bottom: 8px;
+        span {
+            color: $color-red;
+            margin-#{$start-direction}: 4px;
+        }
+    }
+    .input-container {
+        position: relative;
+        input,
+        select,
+        textarea {
+            height: 42px;
+            border-radius: 6px;
+            border: 1.5px solid $color-grey-56;
+            color: $color-grey-31;
+            font-size: 14px;
+            font-weight: 400;
+            padding-#{$end-direction}: 20%;
+            &::placeholder {
+                color: $color-grey-31;
+                font-size: 14px;
+                font-weight: 400;
+            }
+            &:focus {
+                @include boxShadow(none);
+            }
+        }
+        .input-text-container {
+            position: absolute;
+            top: 0;
+            #{$end-direction}: 0;
+            height: 100%;
+            width: 15%;
+            background: $color-grey-61;
+            border-top-#{$end-direction}-radius: 6px;
+            border-bottom-#{$end-direction}-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1.5px solid $color-grey-56;
+            span {
+                color: $color-black-10;
+                font-size: 14px;
+            }
+        }
+    }
+}

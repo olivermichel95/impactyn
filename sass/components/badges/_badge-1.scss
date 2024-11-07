@@ -1,0 +1,22 @@
+.badge.badge-style-1 {
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 12px;
+    &.color-green {
+        background: rgba($color-green-5, .10);
+        color: $color-green-5;
+    }
+    &.color-orange {
+        background: rgba($color-orange-2, .10);
+        color: $color-orange-2;
+    }
+    &.color-red {
+        background: rgba($color-red-2, .10);
+        color: $color-red-2;
+    }
+    &.color-grey {
+        background: rgba($color-grey-31, .10);
+        color: $color-grey-31;
+    }
+}

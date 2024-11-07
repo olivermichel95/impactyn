@@ -1,0 +1,8 @@
+#campaigns_list_page_container {
+    .page-title {
+        @include page-title();
+    }
+    .page-subtitle-container {
+        @include page-subtitle();
+    }
+}

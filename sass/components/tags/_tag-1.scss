@@ -1,0 +1,26 @@
+.tag.tag-style-1 {
+    width: 128px;
+    height: 31px;
+    background: $color-grey-40;
+    border: .75px solid $color-grey-9;
+    border-radius: 37px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .tag-text {
+        font-size: 14px;
+        color: $color-black-11;
+        margin-#{$end-direction}: 10px;
+    }
+    .remove-tag-btn {
+        padding: 0;
+        background: transparent;
+        border: none;
+        svg {
+            width: 12px;
+            height: 12px;
+            color: $color-black-default;
+        }
+    }
+}
