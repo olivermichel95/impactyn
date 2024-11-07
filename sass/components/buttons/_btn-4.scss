@@ -1,0 +1,31 @@
+.btn.btn-style-4 {
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    &.light-grey {
+        background: $color-grey-54;
+        color: $color-grey-55;
+        font-weight: 400;
+    }
+    &.blue {
+        background: $color-blue-3;
+        color: $color-white;
+        font-weight: 700;
+    }
+    &.has-icon {
+        position: relative;
+        span {
+            text-align: center;
+        }
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-left: 20px;
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50% * $transform-direction));
+            #{$end-direction}: 14px;
+        }
+    }
+}

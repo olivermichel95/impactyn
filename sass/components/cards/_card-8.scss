@@ -1,0 +1,166 @@
+.card-8 {
+    padding: 16px;
+    background-color: $color-white;
+    border-radius: 10px;
+    @include boxShadow(0px 3.4911px 44.7193px rgba($color-black-default, 0.12));
+    .card-img {
+        width: 100%;
+        height: 260px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 16px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 55px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.398929) 4.22%, rgba(0, 0, 0, 0.85) 100%);
+            z-index: 1;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .img-text-container {
+            position: absolute;
+            bottom: 12px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 2;
+            .name,
+            .status {
+                font-size: 14px;
+                color: $color-white;
+                position: absolute;
+                bottom: 0;
+            }
+            .name {
+                font-weight: 700;
+                left: 12px;
+            }
+            .status {
+                font-weight: 400;
+                right: 12px;
+            }
+        }
+    }
+    .card-title {
+        font-size: 16px;
+        color: $color-blue;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+    .dates-container {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid $color-grey-35;
+        margin-bottom: 20px;
+        .date {
+            &:not(:last-child) {
+                border-right: 1px solid $color-grey-34;
+            }
+            &:first-child {
+                flex: 0 0 60%;
+            }
+            &:not(:first-child) {
+                padding-left: 16px;
+            }
+            .date-status {
+                color: $color-red-3;
+                font-size: 14px;
+                font-weight: 700;
+                margin-bottom: 12px;
+            }
+            .date-text {
+                font-size: 14px;
+                font-weight: 400;
+                color: $color-grey-21;
+            }
+        }
+    }
+    .progress-container {
+        margin-bottom: 25px;
+        //TODO: adjust the css here
+        .progress-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &:not(:last-child) {
+                margin-bottom: 18px;
+            }
+            .label {
+                font-size: 14px;
+                font-weight: 400;
+                color: $color-black-5;
+                width: 30%;
+            }
+            .progress {
+                width: 40%;
+            }
+            .numbers {
+                color: $color-grey-13;
+                font-size: 14px;
+                font-weight: 700;
+                width: 25%;
+                text-align: $end-direction;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    .card-8 {
+        padding: 12px;
+        .card-img {
+            height: 220px;
+            margin-bottom: 16px;
+            &::after {
+                height: 37px;
+            }
+            .img-text-container {
+                bottom: 7px;
+                .name,
+                .status {
+                    font-size: 14px;
+                }
+                .name {
+                    left: 7px;
+                }
+                .status {
+                    right: 7px;
+                }
+            }
+        }
+        .card-title {
+            font-size: 18px;
+        }
+        .dates-container {
+            .date {
+                .date-status {
+                    font-size: 14px;
+                    margin-bottom: 2px;
+                }
+                .date-text {
+                    font-size: 14px;
+                }
+            }
+        }
+        .progress-container {
+            margin-bottom: 20px;
+            //TODO: adjust the css here
+            .progress-item {
+                .label {
+                    font-size: 14px;
+                }
+                .numbers {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

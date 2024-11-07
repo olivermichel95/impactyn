@@ -1,0 +1,5 @@
+.card.card-3 {
+    @include card-fixed-style();
+    border: none;
+    padding: 0;
+}

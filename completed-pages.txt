@@ -1,0 +1,11 @@
+1) Login Page
+2) Signup page
+3) Home Page
+4) Campaigns list page
+5) Campaign details page
+6) Statistisc page
+7) Budget page
+8) Inbox Notifications Page
+9) Inbox Messages Page
+10) Profile Details Page
+11) Profile Payment Page

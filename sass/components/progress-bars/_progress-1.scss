@@ -1,0 +1,9 @@
+.progress-style-1 {
+    border-radius: 10px;
+    overflow: hidden;
+    height: 16px;
+    .progress-bar {
+        border-radius: 10px;
+        background-color: $color-blue-3;
+    }
+}

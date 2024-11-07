@@ -1,0 +1,19 @@
+@mixin card-fixed-style {
+    padding: 16px;
+    background: $color-white;
+    border-radius: 10px;
+    .card-header {
+        padding: 0;
+        background: transparent;
+        border: none;
+        .card-title {
+            font-size: 18px;
+            font-weight: 400;
+            color: $color-black-5;
+            margin-bottom: 20px;
+        }
+    }
+    .card-body {
+        padding: 0;
+    }
+}

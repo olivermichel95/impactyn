@@ -1,0 +1,50 @@
+.card.card-5 {
+    background: $color-white;
+    border: none;
+    border-radius: 18px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 80%;
+        background: $color-grey-32;
+        top: 50%;
+        @include transform(translateY(-50% * $transform-direction));
+    }
+    .card-title {
+        font-size: 18px;
+        font-weight: 400;
+        color: $color-black-5;
+        width: 100%;
+    }
+    .description {
+        font-size: 25px;
+        font-weight: 400;
+        color: $color-grey-41;
+    }
+}
+
+@include media-breakpoint-md {
+    .card.card-5 {
+        padding: 16px;
+        height: 145px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .card-title {
+            font-size: 16px;
+            font-weight: 400;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border: none;
+        }
+        .description {
+            font-size: 16px;
+        }
+    }
+}

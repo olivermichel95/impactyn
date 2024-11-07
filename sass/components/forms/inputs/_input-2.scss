@@ -1,0 +1,58 @@
+.input-style-2 {
+    label {
+        font-size: 14px;
+        color: $color-black-4;
+        font-weight: 400;
+        margin-bottom: 8px;
+        span {
+            color: $color-red;
+            margin-#{$start-direction}: 4px;
+        }
+    }
+    .input-container {
+        position: relative;
+        input,
+        select {
+            height: $input-height-md;
+            padding-#{$start-direction}: 12px;
+            border: 1px solid $color-grey-10;
+            border-radius: 6px;
+            color: $color-grey-7;
+            font-size: 14px;
+            font-weight: 700;
+            padding-#{$start-direction}: 80px;
+            &:focus {
+                box-shadow: none !important;
+                border: 1px solid $color-grey-10;
+            }
+            &::placeholder {
+                font-size: 14px;
+                color: $color-grey-31;
+                font-weight: 400;
+            }
+            &.form-control[readonly] {
+                background: transparent !important;
+            }
+        }
+        .icon-container {
+            position: absolute;
+            top: 0;
+            #{$start-direction}: 0;
+            width: 70px;
+            height: 100%;
+            background: $color-grey-57;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+                width: 22px;
+                height: 22px;
+            }
+        }
+    }
+}
+
+.datepicker,
+.table-condensed {
+    width: 20%;
+}

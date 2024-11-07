@@ -1,0 +1,541 @@
+@mixin section-box {
+    background: $color-white;
+    border-radius: 5px;
+    padding: 40px 32px;
+    @include media-breakpoint-md {
+        padding: 20px;
+    }
+}
+
+@mixin remove_img_btn {
+    width: 46px;
+    height: 38px;
+    background: $color-grey-27;
+    padding: 8px;
+    border-radius: 0;
+    border-top-#{$start-direction}-radius: 20px;
+    border-bottom-#{$end-direction}-radius: 10px;
+    display: block;
+    top: auto;
+    bottom: 0;
+    #{$end-direction}: 0;
+    background-image: url("../images/icons/trash.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#create_campaign_page {
+    .page-title {
+        @include page-title();
+    }
+    .page-navigation-container {
+        background: $color-white;
+        width: 100%;
+        padding: 34px 0;
+    }
+    #create_campaign_form {
+        .page-subtitle-container {
+            @include page-subtitle();
+        }
+        .section-box {
+            @include section-box();
+        }
+        .next-step-btn {
+            width: 25% !important;
+        }
+        // STEP ONE
+        #pills-step-one {
+            .last-two-inputs-label {
+                font-size: 14px;
+                color: $color-black-4;
+                font-weight: 400;
+                margin-bottom: 3px;
+                span {
+                    color: $color-red;
+                    margin-#{$start-direction}: 4px;
+                }
+            }
+            .drop-images-area {
+                .image-uploader {
+                    width: 100%;
+                    border: 4px dashed $color-grey-30;
+                    border-radius: 6px;
+                    min-height: 435px;
+                    padding: 16px;
+                    z-index: 1;
+                    .uploaded {
+                        .uploaded-image {
+                            width: 110px;
+                            height: 110px;
+                            border-radius: 10px;
+                            overflow: hidden;
+                            padding: 0;
+                            .delete-image {
+                                @include remove_img_btn();
+                            }
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                    .upload-text {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 16px;
+                        z-index: -1;
+                        .img-icon {
+                            color: $color-grey-58;
+                            width: 47px;
+                            height: 37px;
+                            margin-bottom: 30px;
+                        }
+                        .area-text {
+                            color: $color-black-4;
+                            font-size: 22px;
+                            font-weight: 400;
+                            margin-bottom: 30px;
+                            text-align: center;
+                        }
+                        .other-option-text {
+                            color: $color-grey-31;
+                            font-weight: 700;
+                            font-size: 20px;
+                            margin-bottom: 30px;
+                            padding: 0 20px;
+                            position: relative;
+                            width: 100%;
+                            text-align: center;
+                            &::before,
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                @include transform(translateY(-50% * $transform-direction));
+                                width: calc(40% - 25px);
+                                height: 1px;
+                                background: $color-grey-31;
+                            }
+                            &::before {
+                                #{$start-direction}: 30px;
+                            }
+                            &::after {
+                                #{$end-direction}: 30px;
+                            }
+                        }
+                        .custom-file-upload {
+                            cursor: pointer;
+                            padding: 14px;
+                            border: none;
+                            border-radius: 6px;
+                            font-size: 14px;
+                            background: $color-blue-3;
+                            color: $color-white;
+                            font-weight: 700;
+                            input {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .options-section-container {
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+                }
+                .section-title {
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-bottom: 16px;
+                    color: $color-black-4;
+                }
+                .radios {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    margin-top: -20px;
+                    padding-#{$start-direction}: 20px;
+                    .radio {
+                        margin-top: 20px;
+                        &:not(:last-child) {
+                            margin-#{$end-direction}: 20px;
+                        }
+                    }
+                }
+                .color-picker-container {
+                    display: flex;
+                    align-items: center;
+                    padding-#{$start-direction}: 20px;
+                    .icon-container {
+                        width: 50px;
+                        height: 50px;
+                        background: $color-white;
+                        @include boxShadow(0px 4px 18px rgba($color-black-default, 0.09));
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-#{$end-direction}: 15px;
+                        border-radius: 50%;
+                        svg {
+                            width: 28px;
+                            height: 28px;
+                            color: $color-grey-13;
+                        }
+                    }
+                    .sp-replacer {
+                        width: 70%;
+                        height: 34px;
+                        border-radius: 10px;
+                        padding: 0;
+                        .sp-preview {
+                            width: 100%;
+                            height: 100%;
+                            .sp-preview-inner {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .sp-dd {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .toggle-section {
+                position: relative;
+                &.disabled {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background-color: rgba($color-white, .5);
+                        top: 0;
+                        bottom: -20px;
+                        #{$end-direction}: -32px;
+                        #{$start-direction}: -32px;
+                        z-index: 50;
+                    }
+                }
+            }
+            .logos-section {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-top: -20px;
+                .radio {
+                    margin-top: 20px;
+                }
+            }
+            .custom-height {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                &:first-child {
+                    height: 50% !important;
+                }
+                &:last-child {
+                    height: calc(50% - 1.5rem);
+                }
+            }
+        }
+        // END STEP ONE
+        // STEP TWO
+        #pills-step-two {
+            .section-container {
+                background: $color-white;
+                .section-header {
+                    padding: 16px 35px;
+                    border-bottom: 2px solid $color-grey-10;
+                    display: flex;
+                    align-items: center;
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                        margin-#{$end-direction}: 10px;
+                    }
+                    span {
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+                    &.instagram-header {
+                        span {
+                            color: $color-purple-2;
+                        }
+                    }
+                    &.facebook-header {
+                        span {
+                            color: $color-blue-5;
+                        }
+                    }
+                    &.snapchat-header {
+                        span {
+                            color: $color-orange-3;
+                        }
+                    }
+                }
+                .section-body {
+                    padding: 24px 35px;
+                    .impactors-number-block {
+                        // border-#{$start-direction}: 3px solid $color-grey-56;
+                        padding-#{$start-direction}: 48px;
+                        position: relative;
+                        .title,
+                        .description {
+                            font-size: 14px;
+                        }
+                        .title {
+                            font-weight: 400;
+                            margin-bottom: 13px;
+                        }
+                        .description {
+                            font-weight: 700;
+                        }
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            #{$start-direction}: 24px;
+                            bottom: 0;
+                            height: calc(100% + 24px);
+                            width: 3px;
+                            background: $color-grey-56;
+                        }
+                    }
+                }
+            }
+        }
+        // END STEP TWO
+        // STEP THREE
+        #pills-step-three {
+            .step-three-box {
+                background: $color-white;
+                padding: 16px;
+                min-height: 150px;
+            }
+            .input-style-5 {
+                height: 100%;
+                width: 100%;
+                .bootstrap-tagsinput {
+                    height: 100%;
+                    width: 100%;
+                    border: none;
+                    @include boxShadow(none);
+                    border-radius: 0;
+                    margin-top: -6px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .tag {
+                        margin-top: 6px;
+                        color: $color-black-11;
+                        width: fit-content;
+                        height: 31px;
+                        background: $color-grey-40;
+                        border: .75px solid $color-grey-9;
+                        border-radius: 37px;
+                        padding: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-#{$end-direction}: 6px;
+                    }
+                    input {
+                        height: 100%;
+                        width: 100%;
+                        border: none;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: $color-black-11;
+                    }
+                }
+            }
+            .page-subtitle-container.images-section {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 2px solid $color-grey-10;
+                .subtitle-container.has-border {
+                    border: none;
+                }
+                .add-images-btn {
+                    display: flex;
+                    align-items: center;
+                    padding: 0;
+                    span {
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: $color-grey-27;
+                        margin-#{$end-direction}: 14px;
+                    }
+                    svg {
+                        width: 17px;
+                        height: 17px;
+                        color: $color-grey-13;
+                    }
+                }
+            }
+            .drop-images-container {
+                padding: 0;
+                height: 100%;
+                .image-uploader {
+                    border: none;
+                    .upload-text {
+                        span {
+                            display: none;
+                        }
+                    }
+                    .uploaded {
+                        .uploaded-image {
+                            width: 140px;
+                            height: 140px;
+                            border-radius: 10px;
+                            overflow: hidden;
+                            padding: 0;
+                            .delete-image {
+                                @include remove_img_btn();
+                            }
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // END STEP THREE
+        // STEP FOUR
+        #pills-step-four {
+            .filter-style-1 {
+                justify-content: flex-start;
+                .form-group {
+                    flex: 0 0 122px;
+                }
+            }
+        }
+        // END STEP FOUR
+    }
+}
+
+@include media-breakpoint-md {
+    #create_campaign_page {
+        .page-navigation-container {
+            padding: 20px 0;
+        }
+        #create_campaign_form {
+            .next-step-btn {
+                width: 100% !important;
+            }
+            // STEP ONE
+            #pills-step-one {
+                .drop-images-area {
+                    .image-uploader {
+                        min-height: 315px;
+                        padding: 12px;
+                        .upload-text {
+                            padding: 12px;
+                            .img-icon {
+                                width: 24px;
+                                height: 14px;
+                                margin-bottom: 16px;
+                            }
+                            .area-text {
+                                font-size: 16px;
+                                margin-bottom: 16px;
+                            }
+                            .other-option-text {
+                                font-size: 16px;
+                                margin-bottom: 16px;
+                            }
+                        }
+                    }
+                }
+                .options-section-container {
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+                    .radios {
+                        margin-top: -16px;
+                        padding-#{$start-direction}: 12px;
+                        .radio {
+                            margin-top: 16px;
+                            &:not(:last-child) {
+                                margin-#{$end-direction}: 16px;
+                            }
+                        }
+                    }
+                }
+                .toggle-section {
+                    position: relative;
+                    &.disabled {
+                        &::after {
+                            top: 0;
+                            bottom: 0;
+                            #{$end-direction}: 0;
+                            #{$start-direction}: 0;
+                        }
+                    }
+                }
+                .logos-section {
+                    margin-top: -16px;
+                    .radio {
+                        margin-top: 16px;
+                    }
+                }
+                .custom-height {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    &:first-child {
+                        height: auto !important;
+                    }
+                    &:last-child {
+                        height: auto;
+                    }
+                }
+            }
+            // END STEP ONE
+            // STEP TWO
+            #pills-step-two {
+                .section-container {
+                    .section-header {
+                        padding: 16px;
+                    }
+                    .section-body {
+                        padding: 16px;
+                        .impactors-number-block {
+                            padding-#{$start-direction}: 0;
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            // END STEP TWO
+            // STEP THREE
+            #pills-step-three {
+                .page-subtitle-container.images-section {
+                    .add-images-btn {
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+                .drop-images-container {
+                    .image-uploader {
+                        .uploaded {
+                            .uploaded-image {
+                                width: 105px;
+                                height: 105px;
+                            }
+                        }
+                    }
+                }
+            }
+            // END STEP THREE
+        }
+    }
+}

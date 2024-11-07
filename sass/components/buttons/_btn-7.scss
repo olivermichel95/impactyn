@@ -1,0 +1,44 @@
+.btn.btn-style-7 {
+    @include boxShadow(0px 4px 18px rgba($color-black-default, 0.11));
+    background: $color-white;
+    padding: 18px 24px;
+    color: $color-grey-27;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 5px;
+    &:focus {
+        @include boxShadow(0px 4px 18px rgba($color-black-default, 0.11) !important);
+    }
+    &.active {
+        background: $color-grey-27;
+        color: $color-white;
+        font-weight: 700;
+    }
+    &.sm {
+        font-size: 14px;
+        padding: 10px 24px;
+    }
+    &.has-icon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span {
+            font-size: 16px;
+        }
+        svg {
+            width: 21px;
+            height: 21px;
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    .btn.btn-style-7 {
+        padding: 12px 16px;
+        font-size: 16px;
+        &.sm {
+            font-size: 14px;
+            padding: 6px 24px;
+        }
+    }
+}

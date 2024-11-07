@@ -1,0 +1,25 @@
+.card.card-4 {
+    @include card-fixed-style();
+    border: none;
+    padding: 24px;
+    .card-body {
+        >div {
+            flex: 0 0 100%;
+        }
+        .location-info {
+            width: 100%;
+            .info-text {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 16px;
+                .location,
+                .percentage {
+                    color: $color-grey-41;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

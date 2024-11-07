@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico" />
+
+    <title>Profile Details Page</title>
+    <!-- BASE CSS-->
+    <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- END BASE CSS-->
+
+    <!-- PAGE CSS-->
+    <link rel="stylesheet" href="vendors/drag-drop-images/image-uploader.min.css">
+    <!-- END PAGE CCS-->
+</head>
+
+<body>
+    <div class="pre-loader">
+        <div class="pre-loader-object"></div>
+    </div>
+    <!-- HEADER-->
+    <header>
+        <button type="button" id="mobile_menu_btn" class="btn d-md-none d-block">
+            <i class="convert-svg" data-src="images/icons/mobile-menu-btn.svg"></i>
+        </button>
+        <div class="main-header-container">
+            <a href="index.html" class="logo-container">
+                <i class="convert-svg" data-src="images/logo_icon.svg"></i>
+                <p class="mb-0 logo-text">impactyn</p>
+            </a>
+            <div class="icons-container messages-notifications-container">
+                <div class="chat-container ">
+                    <button type="button" class="chat-btn messages-btn">
+                    <i class="convert-svg chat-icon" data-src="images/icons/chat.svg"></i>
+                    <i class="convert-svg arrow-down-icon" data-src="images/icons/caret-down.svg"></i>
+                </button>
+                    <div class="messages-notifications-box" id="messages_box">
+                        <div class="box-header-container">
+                            <p class="mb-0 box-title">Messages</p>
+                            <div class="tab tab-style-1">
+                                <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="pills-all-messages-tab" data-toggle="pill" href="#pills-all-messages" role="tab" aria-controls="pills-all-messages" aria-selected="true">All</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-unread-messages-tab" data-toggle="pill" href="#pills-unread-messages" role="tab" aria-controls="pills-unread-messages" aria-selected="false">Unread</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="box-body-container">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-all-messages" role="tabpanel" aria-labelledby="pills-all-messages-tab">
+                                    <div class="messages-container">
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name">Your <span>Pepsi campaign</span> has just reached around <span>2500</span> people</p>
+                                                        <p class="message-text">Your campaign is rejected, please check your messages</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name">Your <span>Pepsi campaign</span> has just reached around <span>2500</span> people</p>
+                                                        <p class="message-text">Your campaign is rejected, please check your messages</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message unread">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name">Your <span>Pepsi campaign</span> has just reached around <span>2500</span> people</p>
+                                                        <p class="message-text">Your campaign is rejected, please check your messages</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name">Your <span>Pepsi campaign</span> has just reached around <span>2500</span> people</p>
+                                                        <p class="message-text">Your campaign is rejected, please check your messages</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name">Your <span>Pepsi campaign</span> has just reached around <span>2500</span> people</p>
+                                                        <p class="message-text">Your campaign is rejected, please check your messages</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name">Your <span>Pepsi campaign</span> has just reached around <span>2500</span> people</p>
+                                                        <p class="message-text">Your campaign is rejected, please check your messages</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name">Your <span>Pepsi campaign</span> has just reached around <span>2500</span> people</p>
+                                                        <p class="message-text">Your campaign is rejected, please check your messages</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name">Your <span>Pepsi campaign</span> has just reached around <span>2500</span> people</p>
+                                                        <p class="message-text">Your campaign is rejected, please check your messages</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                    </div>
+                                    <a class="all-messages-link d-block" href="inbox-messages.html">See all messages</a>
+                                </div>
+                                <div class="tab-pane fade" id="pills-unread-messages" role="tabpanel" aria-labelledby="pills-unread-messages-tab">
+                                    <div class="messages-container">
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message unread">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name">Your <span>Pepsi campaign</span> has just reached around <span>2500</span> people</p>
+                                                        <p class="message-text">Your campaign is rejected, please check your messages</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message unread">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name">Your <span>Pepsi campaign</span> has just reached around <span>2500</span> people</p>
+                                                        <p class="message-text">Your campaign is rejected, please check your messages</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message unread">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name">Your <span>Pepsi campaign</span> has just reached around <span>2500</span> people</p>
+                                                        <p class="message-text">Your campaign is rejected, please check your messages</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message unread">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name">Your <span>Pepsi campaign</span> has just reached around <span>2500</span> people</p>
+                                                        <p class="message-text">Your campaign is rejected, please check your messages</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message unread">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name">Your <span>Pepsi campaign</span> has just reached around <span>2500</span> people</p>
+                                                        <p class="message-text">Your campaign is rejected, please check your messages</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message unread">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name">Your <span>Pepsi campaign</span> has just reached around <span>2500</span> people</p>
+                                                        <p class="message-text">Your campaign is rejected, please check your messages</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message unread">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name">Your <span>Pepsi campaign</span> has just reached around <span>2500</span> people</p>
+                                                        <p class="message-text">Your campaign is rejected, please check your messages</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message unread">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name">Your <span>Pepsi campaign</span> has just reached around <span>2500</span> people</p>
+                                                        <p class="message-text">Your campaign is rejected, please check your messages</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                    </div>
+                                    <a class="all-messages-link d-block" href="inbox-messages.html">See all unread messages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="notifications-container messages-notifications-container">
+                    <button type="button" class="notifications-dropdown-btn messages-btn">
+                    <i class="convert-svg notification-icon" data-src="images/icons/bell.svg"></i>
+                    <i class="convert-svg arrow-down-icon" data-src="images/icons/caret-down.svg"></i>
+                </button>
+                    <div class="messages-notifications-box" id="notifications_box">
+                        <div class="box-header-container">
+                            <p class="mb-0 box-title">Notifications</p>
+                            <div class="tab tab-style-1">
+                                <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="pills-all-notifications-tab" data-toggle="pill" href="#pills-all-notifications" role="tab" aria-controls="pills-all-notifications" aria-selected="true">All</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-unread-notifications-tab" data-toggle="pill" href="#pills-unread-notifications" role="tab" aria-controls="pills-unread-notifications" aria-selected="false">Unread</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="box-body-container">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-all-notifications" role="tabpanel" aria-labelledby="pills-all-notifications-tab">
+                                    <div class="messages-container">
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name"><span>Impactyn</span></p>
+                                                        <p class="message-text">Check your reach capacity and track your progress</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message user-message">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name"><span>Salwa Hakeem</span></p>
+                                                        <p class="message-text">Check your reach capacity and track your progress</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message unread">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name"><span>Impactyn</span></p>
+                                                        <p class="message-text">Check your reach capacity and track your progress</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message user-message">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name"><span>Maged Mostafa</span></p>
+                                                        <p class="message-text">Check your reach capacity and track your progress</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name"><span>Impactyn</span></p>
+                                                        <p class="message-text">Check your reach capacity and track your progress</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name"><span>Impactyn</span></p>
+                                                        <p class="message-text">Check your reach capacity and track your progress</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name"><span>Impactyn</span></p>
+                                                        <p class="message-text">Check your reach capacity and track your progress</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name"><span>Impactyn</span></p>
+                                                        <p class="message-text">Check your reach capacity and track your progress</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                    </div>
+                                    <a class="all-messages-link d-block" href="inbox-notifications.html">See all notifications</a>
+                                </div>
+                                <div class="tab-pane fade" id="pills-unread-notifications" role="tabpanel" aria-labelledby="pills-unread-notifications-tab">
+                                    <div class="messages-container">
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message unread">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name"><span>Impactyn</span></p>
+                                                        <p class="message-text">Check your reach capacity and track your progress</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message unread user-message">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name"><span>Salwa Hakeem</span></p>
+                                                        <p class="message-text">Check your reach capacity and track your progress</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message unread">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name"><span>Impactyn</span></p>
+                                                        <p class="message-text">Check your reach capacity and track your progress</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message unread user-message">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name"><span>Maged Mostafa</span></p>
+                                                        <p class="message-text">Check your reach capacity and track your progress</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message unread">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name"><span>Impactyn</span></p>
+                                                        <p class="message-text">Check your reach capacity and track your progress</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message unread">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name"><span>Impactyn</span></p>
+                                                        <p class="message-text">Check your reach capacity and track your progress</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message unread">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name"><span>Impactyn</span></p>
+                                                        <p class="message-text">Check your reach capacity and track your progress</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                        <!-- message -->
+                                        <a href="#" class="message-container d-block">
+                                            <div class="message unread">
+                                                <div class="message-info">
+                                                    <div class="img-container">
+                                                        <img class="lazy" data-src="" alt="">
+                                                    </div>
+                                                    <div class="message-details">
+                                                        <p class="campain-name"><span>Impactyn</span></p>
+                                                        <p class="message-text">Check your reach capacity and track your progress</p>
+                                                    </div>
+                                                </div>
+                                                <p class="message-date mb-0">2m ago</p>
+                                            </div>
+                                        </a>
+                                        <!-- end message -->
+                                    </div>
+                                    <a class="all-messages-link d-block" href="inbox-notifications.html">See all unread notifications</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-info-container" id="profile_box">
+                    <button type="button" class="profile-btn" id="profile_btn">
+                    <div class="profile-img-container">
+                        <img class="lazy" data-src="images/user_avatar_placeholder.jpg" alt="">
+                    </div>
+                    <span class="d-none d-md-block">Hello, Brand</span>
+                    <i class="convert-svg d-none d-md-block" data-src="images/icons/caret-down.svg"></i>
+                </button>
+                    <!-- profile menu -->
+                    <div class="profile-menu">
+                        <div class="general-info-container">
+                            <div class="img-container">
+                                <img class="lazy" data-src="images/user_avatar_placeholder.jpg" alt="">
+                            </div>
+                            <div class="text-info">
+                                <p class="name">Pepsi Cola</p>
+                                <p class="email">pepsicola12@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="account-navigation-links">
+                            <a href="#" class="link">
+                                <i class="convert-svg" data-src="images/icons/user.svg"></i>
+                                <span class="link-text">My account</span>
+                            </a>
+                            <a href="#" class="link">
+                                <i class="convert-svg" data-src="images/icons/gear.svg"></i>
+                                <span class="link-text">Settings</span>
+                            </a>
+                            <a href="#" class="link">
+                                <span class="link-text">Log out</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end profile menu -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--END HEADER -->
+
+    <!-- SIDE MENU -->
+    <aside>
+        <div class="mobile-side-menu-header">
+            <div class="content">
+                <span>Hello, Brand</span>
+                <div class="img-container">
+                    <img class="lazy" data-src="images/user_avatar_placeholder.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <a href="index.html" class="side-bar-link">
+            <i class="convert-svg" data-src="images/icons/home.svg"></i>
+            <p class="mb-0 link-text">Home</p>
+        </a>
+        <a href="profile-details.html" class="side-bar-link active">
+            <i class="convert-svg" data-src="images/icons/user-circle.svg"></i>
+            <p class="mb-0 link-text">Profile</p>
+        </a>
+        <!-- dropdown -->
+        <div class="side-bar-link dropdown">
+            <i class="convert-svg dropdown-svg" data-src="images/icons/speaker.svg"></i>
+            <div id="accordion">
+                <button class="btn collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <span class="btn-text">All Campaigns</span>
+                    <i class="convert-svg" data-src="images/icons/caret-right.svg"></i>
+                </button>
+                <div id="collapseOne" class="collapse dropdown-links" aria-labelledby="headingOne" data-parent="#accordion">
+                    <a href="campaigns-list.html" class="dropdown-link">
+                        <i class="convert-svg" data-src="images/icons/user-circle.svg"></i>
+                        <p class="mb-0 dropdown-link-text">Pending Campaigns</p>
+                    </a>
+                    <a href="campaigns-list.html" class="dropdown-link">
+                        <i class="convert-svg" data-src="images/icons/user-circle.svg"></i>
+                        <p class="mb-0 dropdown-link-text">Inprogress Campaigns</p>
+                    </a>
+                    <a href="campaigns-list.html" class="dropdown-link active">
+                        <i class="convert-svg" data-src="images/icons/done.svg"></i>
+                        <p class="mb-0 dropdown-link-text">Closed Campaigns</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- end dropdown -->
+        <a href="create-campaign.html" class="side-bar-link">
+            <i class="convert-svg" data-src="images/icons/create-campaign-icon.svg"></i>
+            <p class="mb-0 link-text">Create New Campaign</p>
+        </a>
+        <a href="inbox-notifications.html" class="side-bar-link">
+            <i class="convert-svg" data-src="images/icons/envelope.svg"></i>
+            <p class="mb-0 link-text">Inbox</p>
+        </a>
+        <a href="statistics.html" class="side-bar-link">
+            <i class="convert-svg" data-src="images/icons/stock-exchange.svg"></i>
+            <p class="mb-0 link-text">Statistics</p>
+        </a>
+        <a href="budget.html" class="side-bar-link">
+            <i class="convert-svg" data-src="images/icons/coins.svg"></i>
+            <p class="mb-0 link-text">Campaign Budget</p>
+        </a>
+        <div class="divider d-none d-md-block"></div>
+        <div class="toggle-side-menu-btn d-none d-md-block">
+            <button type="button" class="btn">
+                <i class="convert-svg" data-src="images/icons/two-right-arrows.svg"></i>
+            </button>
+        </div>
+    </aside>
+    <!-- END SIDE MENU -->
+
+    <main>
+        <!--BODY-->
+        <div id="profile_page" class="pt-5 pb-5">
+            <!-- page navigation -->
+            <div class="container-fluid mb-3 mb-md-4">
+                <div class="row">
+                    <div class="col-12 mb-3 mb-md-4">
+                        <h1 class="page-title">PROFILE</h1>
+                    </div>
+                    <div class="col-12">
+                        <div class="profile-navigation-btns">
+                            <a href="profile-details.html" class="btn btn-style-7 active">Profile Details</a>
+                            <a href="profile-payment.html" class="btn btn-style-7">Payment</a>
+                            <a href="profile-legal-papers.html" class="btn btn-style-7">Legal papers and contract</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end page navigation -->
+            <div id="profile_details_page">
+                <div class="container-fluid">
+                    <form action="#" id="edit_profile_form">
+                        <div class="row">
+                            <!-- contact info section -->
+                            <div class="col-12 col-md-6 mb-3 mb-md-4 h-100">
+                                <div class="page-subtitle-container has-button">
+                                    <div class="subtitle-container">
+                                        <i class="convert-svg" data-src="images/icons/pending-icon.svg"></i>
+                                        <h2 class="subtitle-text mb-0">Contact information</h2>
+                                    </div>
+                                    <button type="submit" class="btn btn-style-7 sm active">Save</button>
+                                </div>
+                                <div class="page-section contact-info-section">
+                                    <div class="form-group input-style-1">
+                                        <label for="brand_name">Brand Name</label>
+                                        <input type="text" class="form-control" id="brand_name" name="brand-name" placeholder="Brand Name" required value="Pepsi">
+                                    </div>
+                                    <div class="form-group input-style-1">
+                                        <label for="brand_category">Brand Category</label>
+                                        <input type="text" class="form-control" id="brand_category" name="brand-category" placeholder="Brand Category" required value="Food & Drinks">
+                                    </div>
+                                    <div class="form-group input-style-1">
+                                        <label for="contact_email">Contact Email</label>
+                                        <input type="email" class="form-control" id="contact_email" name="contact-email" placeholder="Contact Email" required value="pepsiegypt@gmail.com">
+                                    </div>
+                                    <div class="form-group input-style-1">
+                                        <label for="phone_number">Phone number</label>
+                                        <input type="text" class="form-control" id="phone_number" name="phone-number" placeholder="Phone Number" required value="01234567891">
+                                    </div>
+                                    <div class="form-group input-style-1">
+                                        <label for="country">Country</label>
+                                        <input type="text" class="form-control" id="country" name="country" placeholder="Country" required value="Egypt">
+                                    </div>
+                                    <div class="form-group input-style-1">
+                                        <label for="city">City</label>
+                                        <input type="text" class="form-control" id="city" name="city" placeholder="city" required value="Alexandria">
+                                    </div>
+                                    <div class="form-group input-style-1">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="password" required value="*********">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end contact info section -->
+                            <!-- brand logos section -->
+                            <div class="col-12 col-md-6 mb-3 mb-md-4 h-100">
+                                <div class="page-subtitle-container has-button h-25">
+                                    <div class="subtitle-container">
+                                        <i class="convert-svg" data-src="images/icons/pending-icon.svg"></i>
+                                        <h2 class="subtitle-text mb-0">Brand Logos</h2>
+                                    </div>
+                                    <button type="submit" class="btn btn-style-7 sm active">Save</button>
+                                </div>
+                                <div class="page-section brand-logos-section h-75" data-images='[{"id": 1, "src": "../../images/placeholders/placeholder-sm-1.jpg"}, {"id": 2, "src": "../../images/placeholders/placeholder-sm-2.jpg"}, {"id": 3, "src": "../../images/placeholders/placeholder-sm-3.jpg"}]'>
+                                    <button type="button" class="btn add-item-btn">
+                                        <i class="convert-svg" data-src="images/icons/plus.svg"></i>
+                                        <span>Add Logos</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- end brand logos section -->
+                            <div class="col-12">
+                                <div class="page-subtitle-container mb-2 mb-md-3">
+                                    <div class="subtitle-container has-border">
+                                        <i class="convert-svg" data-src="images/icons/pending-icon.svg"></i>
+                                        <h2 class="subtitle-text mb-0">Products</h2>
+                                    </div>
+                                </div>
+                                <div class="products-section">
+                                    <!-- product -->
+                                    <div class="product">
+                                        <div class="product-header">
+                                            <div class="form-group input-style-1">
+                                                <label for="product_name">Product Name</label>
+                                                <input type="text" class="form-control" id="product_name" name="product-names[]" placeholder="Product Name" required value="Diet Pepsi">
+                                            </div>
+                                            <button type="submit" class="btn btn-style-7 sm active">Save</button>
+                                        </div>
+                                        <p class="product-images-title">Product Images</p>
+                                        <div class="product-images" data-images='[{"id": 1, "src": "../../images/placeholders/placeholder-sm-1.jpg"}, {"id": 2, "src": "../../images/placeholders/placeholder-sm-2.jpg"}, {"id": 3, "src": "../../images/placeholders/placeholder-sm-3.jpg"}]'>
+                                            <button type="button" class="btn add-item-btn">
+                                                    <i class="convert-svg" data-src="images/icons/plus.svg"></i>
+                                                    <span>Add Images</span>
+                                                </button>
+                                        </div>
+                                    </div>
+                                    <!-- end product -->
+                                    <!-- product -->
+                                    <div class="product">
+                                        <div class="product-header">
+                                            <div class="form-group input-style-1">
+                                                <label for="product_name_1">Product Name</label>
+                                                <input type="text" class="form-control" id="product_name_1" name="product-names[]" placeholder="Product Name" required value="">
+                                            </div>
+                                            <button type="submit" class="btn btn-style-7 sm active">Save</button>
+                                        </div>
+                                        <p class="product-images-title">Product Images</p>
+                                        <div class="product-images" data-images='[]'>
+                                            <button type="button" class="btn add-item-btn">
+                                                <i class="convert-svg" data-src="images/icons/plus.svg"></i>
+                                                <span>Add Images</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- end product -->
+                                    <div class="d-flex justify-content-end">
+                                        <button type="button" class="btn add-item-btn add-product-btn" id="add_product_btn">
+                                            <i class="convert-svg" data-src="images/icons/plus.svg"></i>
+                                            <span>Add Product</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--END BODY-->
+    </main>
+
+
+
+    <!--FOOTER-->
+    <footer>
+    </footer>
+    <!--END FOOTER-->
+
+    <!-- BASE JS-->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendors/jquery-validation/jquery.validate.min.js"></script>
+    <script src="vendors/jquery.lazy/jquery.lazy.min.js"></script>
+    <script src="js/app.js"></script>
+    <!-- END BASE JS-->
+
+    <!-- PAGE JS-->
+    <script src="vendors/drag-drop-images/image-uploader.min.js"></script>
+    <script src="js/pages/profile.js"></script>
+    <!-- END PAGE JS-->
+
+</body>
+
+</html>

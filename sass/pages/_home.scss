@@ -1,0 +1,5 @@
+#home_page_container {
+    .page-title {
+        @include page-title();
+    }
+}

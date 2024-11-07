@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.ico" />
+
+    <title>Charts Page</title>
+    <!-- BASE CSS-->
+    <link rel="stylesheet" href="../vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- END BASE CSS-->
+
+    <!-- PAGE CSS-->
+    <style>
+        .page-title {
+            font-size: 40px;
+            color: #ED202E;
+            font-weight: 700;
+        }
+        
+        .item-title {
+            font-size: 22px;
+            color: #1E1E1E;
+            font-weight: 500;
+        }
+    </style>
+    <!-- END PAGE CCS-->
+</head>
+
+<body>
+
+
+    <main>
+        <!--BODY-->
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <h1 class="page-title text-center">Charts</h1>
+                </div>
+                <div class="col-12 d-flex justify-content-end mb-5">
+                    <a href="ui-components.html" class="btn btn-style-1">Back to Ui Components</a>
+                </div>
+                <!-- chart 1 (pie chart) -->
+                <div class="col-12 col-md-6 mb-3">
+                    <div class="card card-1 chart chart-1" data-data='{"Facebook":{"number":20,"color":"#6668BB"},"Instagram":{"number":50,"color":"#F36873"},"Snapchat":{"number":30,"color":"#EAE850"}}'>
+                        <div class="card-header">
+                            <span class="card-title">Chart 1</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <div class="chart-info-container">
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex justify-content-center">
+                                    <canvas class="pie-chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end chart 1 (pie chart) -->
+                <!-- chart 2 (horizontal graph chart) -->
+                <div class="col-12 col-md-6 mb-3">
+                    <div class="card card-2 chart chart-2" data-data='{"facebook":{"number":20,"color":"#6668BB"},"Instagram":{"number":50,"color":"#F36873"},"Snapchat":{"number":30,"color":"#EAE850"}}'>
+                        <div class="card-header">
+                            <span class="card-title">Chart 2</span>
+                        </div>
+                        <div class="card-body">
+                            <canvas class="horizontal-graph-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- end chart 2 (horizontal graph chart) -->
+                <!-- chart 3 (doghnut chart) -->
+                <div class="col-12 col-md-6 mb-3">
+                    <div class="card card-3 chart chart-3" data-data='{"Remaining":{"number":20,"color":"#ED202E"},"Completed":{"number":50,"color":"#00ABE0"}}'>
+                        <div class="card-header mb-3">
+                            <span class="card-title">Chart 3</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <canvas class="doughnut-chart"></canvas>
+                                </div>
+                                <div class="col-6">
+                                    <div class="chart-info">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end chart 3 (doghnut chart) -->
+                <!-- TODO: adjust this chart -->
+                <!-- chart 4 (bar chart) -->
+                <div class="col-12 col-md-6 mb-3">
+                    <div class="chart chart-4" data-data='{"datasetOne":{"label":"Men","color":"#00ABE0","data":[{"age":"<18","number":"1"},{"age":"18-21","number":"20"},{"age":"21-24","number":"20"},{"age":"24-27","number":"20"},{"age":"27-30","number":"1"},{"age":"30-35","number":"1"},{"age":"35-40","number":"1"},{"age":">40","number":"5"}]},"datasetTwo":{"label":"Women","color":"#E8535D","data":[{"age":"<18","number":"1"},{"age":"18-21","number":"1"},{"age":"21-24","number":"1"},{"age":"24-27","number":"32"},{"age":"27-30","number":"20"},{"age":"30-35","number":"10"},{"age":"35-40","number":"5"},{"age":">40","number":"1"}]}}'>
+                        <div class="chart-header">
+                            <p class="chart-title mb-0">Chart 4</p>
+                            <div class="graph-infos">
+                            </div>
+                        </div>
+                        <div class="chart-body">
+                            <canvas class="bar-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- end chart 4 (bar chart) -->
+                <!-- chart 5 (line chart) -->
+                <div class="col-12 mb-3">
+                    <div class="chart chart-5" data-data='{"A+":{"number":0.9,"color":"#E786D7"},"A":{"number":1.7,"color":"#E786D7"},"B+":{"number":0.9,"color":"#E786D7"},"B":{"number":3,"color":"#E786D7"},"C+":{"number":1,"color":"#E786D7"},"C":{"number":1.5,"color":"#E786D7"}}'>
+                        <div class="chart-header">
+                            <p class="chart-title mb-0">Chart 5</p>
+                        </div>
+                        <div class="chart-body">
+                            <canvas class="line-chart" height="50px"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- end chart 5 (line chart) -->
+            </div>
+        </div>
+        <!--END BODY-->
+    </main>
+
+    <!-- BASE JS-->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendors/jquery-validation/jquery.validate.min.js"></script>
+    <script src="../vendors/jquery.lazy/jquery.lazy.min.js"></script>
+    <script src="../js/app.js"></script>
+    <!-- END BASE JS-->
+
+    <!-- PAGE JS-->
+    <script src="../vendors/chart-js/chart.min.js"></script>
+    <script src="../js/charts.js"></script>
+    <!-- END PAGE JS-->
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+.filter-style-1 {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    .form-text {
+        font-size: 16px;
+        font-weight: 400;
+        color: $color-grey-27;
+        margin-bottom: 0;
+        margin-right: 25px;
+    }
+    .form-group {
+        position: relative;
+        margin-bottom: 0;
+        flex: 0 0 50%;
+        select {
+            width: 100%;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: $color-white;
+            color: $color-grey-50;
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 10px;
+            border: 1.5px solid $color-grey-10;
+            option {
+                color: $color-grey-50;
+                background: $color-white;
+            }
+            &:focus {
+                @include boxShadow(none);
+            }
+        }
+        svg {
+            width: 16px;
+            height: 16px;
+            color: $color-black-default;
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50% * $transform-direction));
+            #{$end-direction}: 22px;
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    .filter-style-1 {
+        justify-content: start;
+        .form-text {
+            margin-#{$end-direction}: 12px;
+        }
+        .form-group {
+            flex: 0 0 80%;
+            select {
+                width: 100%;
+                appearance: none;
+                background: $color-white;
+                color: $color-grey-50;
+                font-weight: 700;
+                border-radius: 10px;
+                border: 1.5px solid $color-grey-10;
+                option {
+                    color: $color-grey-50;
+                    background: $color-white;
+                }
+                &:focus {
+                    @include boxShadow(none);
+                }
+            }
+            svg {
+                width: 16px;
+                height: 16px;
+                color: $color-black-default;
+                position: absolute;
+                top: 50%;
+                @include transform(translateY(-50% * $transform-direction));
+                #{$end-direction}: 22px;
+            }
+        }
+    }
+}

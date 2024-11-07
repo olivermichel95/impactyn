@@ -1,0 +1,39 @@
+.table.table-style-1 {
+    thead {
+        border-bottom: 2px solid $color-grey-47;
+        tr {
+            th {
+                padding-bottom: 30px;
+                border: none;
+                font-size: 16px;
+                font-weight: 400;
+                color: $color-black-8;
+            }
+        }
+    }
+    tbody {
+        tr {
+            &:not(:last-child) {
+                border-bottom: 1px solid $color-grey-48;
+            }
+            td {
+                vertical-align: middle;
+                font-size: 14px;
+                font-weight: 400;
+                color: $color-grey-7;
+                border: none;
+                .img-container {
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}

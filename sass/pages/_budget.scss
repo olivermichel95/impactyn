@@ -1,0 +1,18 @@
+#budget_page {
+    .page-title {
+        @include page-title();
+    }
+    #budget_page_form {
+        background: $color-white;
+        border-radius: 6px;
+        padding: 24px 27px 100px;
+    }
+}
+
+@include media-breakpoint-md {
+    #budget_page {
+        #budget_page_form {
+            padding: 24px;
+        }
+    }
+}

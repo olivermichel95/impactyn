@@ -1,0 +1,134 @@
+/* ------------------------------------------------------------------------------
+*
+*  # Pick-a-date - Time picker
+*
+*  The mobile-friendly, responsive, and lightweight jQuery date & time input picker
+*
+* ---------------------------------------------------------------------------- */
+
+.picker__list-item,
+.picker__list button {
+    -webkit-transition: all ease-in-out 0.15s;
+    -o-transition: all ease-in-out 0.15s;
+    transition: all ease-in-out 0.15s;
+}
+
+.picker--time {
+    min-width: 256px;
+    max-width: 320px;
+}
+
+.picker--time .picker__box {
+    padding: 0;
+}
+
+.picker__list {
+    list-style: none;
+    padding: 7px 0;
+    margin: 0;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.picker__list-item {
+    position: relative;
+    padding: 7px 12px;
+}
+
+.picker__list-item:hover,
+.picker__list-item:focus {
+    cursor: pointer;
+    background-color: #f5f5f5;
+    z-index: 10;
+}
+
+.picker--time .picker__button--clear {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 6px 11px;
+    background-color: #fcfcfc;
+    margin-top: 1px;
+    outline: 0;
+    border: 0;
+    border-top: 1px solid #eeeeee;
+    text-align: center;
+    margin-bottom: -7px;
+    margin-top: 7px;
+}
+
+.picker--time .picker__button--clear:hover,
+.picker--time .picker__button--clear:focus {
+    background-color: #f5f5f5;
+}
+
+.picker__list-item--highlighted {
+    z-index: 10;
+}
+
+.picker__list-item--highlighted,
+.picker__list-item--highlighted:hover,
+.picker--focused .picker__list-item--highlighted {
+    cursor: pointer;
+    color: #fff;
+    background-color: #26A69A;
+}
+
+.picker__list-item--selected,
+.picker__list-item--selected:hover,
+.picker--focused .picker__list-item--selected {
+    background-color: #26A69A;
+    color: #fff;
+    z-index: 10;
+}
+
+.picker__list-item--disabled,
+.picker__list-item--disabled:hover,
+.picker--focused .picker__list-item--disabled {
+    background-color: #fafafa;
+    color: #999999;
+    cursor: not-allowed;
+    z-index: auto;
+}
+
+.picker__input {
+    cursor: default;
+}
+
+.picker__input,
+.picker__input {
+    border-bottom-right-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+}
+
+.picker__holder {
+    width: 100%;
+    overflow-y: auto;
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    max-width: 290px;
+    max-height: 0;
+    outline: 0;
+    -webkit-overflow-scrolling: touch;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 10;
+}
+
+.picker--opened .picker__holder {
+    max-height: 480px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    display: block;
+}
+
+.picker__box {
+    padding: 14px;
+}

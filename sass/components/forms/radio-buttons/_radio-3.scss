@@ -1,0 +1,56 @@
+.radio.radio-style-3 {
+    width: 172px;
+    label {
+        width: 100%;
+        cursor: pointer;
+        border: 1px solid $color-grey-32;
+        border-radius: 10px;
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        input {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-71% * $transform-direction));
+            #{$start-direction}: 45px;
+            accent-color: $color-grey-31;
+            &:checked {
+                accent-color: $color-red;
+            }
+        }
+        span {
+            font-size: 14px;
+            font-weight: 400;
+            color: $color-grey-33;
+            margin-#{$start-direction}: 45px;
+            white-space: nowrap;
+        }
+    }
+    &.checked {
+        label {
+            border-color: $color-red;
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    .radio.radio-style-3 {
+        width: 130px;
+        label {
+            padding: 12px;
+            input {
+                width: 14px;
+                height: 14px;
+                @include transform(translateY(-83% * $transform-direction));
+                #{$start-direction}: 30px;
+            }
+            span {
+                margin-#{$start-direction}: 20px;
+                white-space: nowrap;
+            }
+        }
+    }
+}

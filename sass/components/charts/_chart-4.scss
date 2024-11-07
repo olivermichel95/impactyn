@@ -1,0 +1,39 @@
+.chart.chart-4 {
+    padding: 24px;
+    background: $color-white;
+    border-radius: 10px;
+    .chart-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        .chart-title {
+            font-size: 18px;
+            font-weight: 400;
+            color: $color-black-5;
+        }
+        .graph-infos {
+            display: flex;
+            align-items: center;
+            .graph-info {
+                display: flex;
+                align-items: center;
+                &:not(:last-child) {
+                    margin-#{$end-direction}: 10px;
+                }
+                .color {
+                    width: 18px;
+                    height: 18px;
+                    background: $color-red;
+                    margin-#{$end-direction}: 6px;
+                    border-radius: 6px;
+                }
+                .label {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: $color-grey-41;
+                }
+            }
+        }
+    }
+}

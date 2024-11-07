@@ -1,0 +1,136 @@
+#notifications_messages_page {
+    .page-title {
+        @include page-title();
+    }
+    .messages-notifications-box {
+        @include messages_notifications_style();
+        position: relative !important;
+        opacity: 1;
+        visibility: visible;
+        z-index: 1;
+        min-width: unset;
+        max-height: unset;
+        top: auto;
+        #{$end-direction}: auto;
+        border: none;
+        padding-bottom: 0;
+        .box-header-container {
+            margin-bottom: 20px !important;
+        }
+        .box-body-container {
+            padding-#{$start-direction}: 0;
+            padding-#{$end-direction}: 0;
+            .tab-content {
+                .tab-pane {
+                    .messages-container {
+                        width: 100%;
+                        max-height: unset;
+                        overflow-y: unset;
+                        .message-container {
+                            padding: 0;
+                            .message {
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: space-between;
+                                padding: 24px 32px;
+                                &:first-of-type {
+                                    border-top: 1px solid $color-grey-24;
+                                }
+                                &.unread {
+                                    background: rgba($color-purple, 0.10);
+                                    border-#{$start-direction}: 4px solid $color-purple;
+                                }
+                                .message-info {
+                                    display: flex;
+                                    align-items: flex-start;
+                                    .img-container {
+                                        width: 35px;
+                                        height: 35px;
+                                        border-radius: 50%;
+                                        overflow: hidden;
+                                        background: $color-red-3;
+                                        margin-#{$end-direction}: 20px;
+                                        flex-shrink: 0;
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                        }
+                                    }
+                                    .message-details {
+                                        .campain-name {
+                                            font-size: 16px;
+                                            font-weight: 400;
+                                            color: $color-grey-59;
+                                            margin-bottom: 8px;
+                                            span {
+                                                font-weight: 700;
+                                            }
+                                        }
+                                        .message-text {
+                                            color: $color-grey-59;
+                                            font-size: 14px;
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                                .message-date {
+                                    color: $color-grey-31;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                }
+                                &.user-message {
+                                    .message-info {
+                                        .img-container {
+                                            background: $color-grey-27;
+                                            background-image: url("../../images/icons/user-white.svg");
+                                            background-repeat: no-repeat;
+                                            background-position: center;
+                                            background-size: 15px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    #notifications_messages_page {
+        .messages-notifications-box {
+            @include messages_notifications_mobile_style();
+            max-height: unset;
+            min-width: unset;
+            top: auto;
+            #{$start-direction}: auto;
+            .box-body-container {
+                padding-#{$start-direction}: 0;
+                padding-#{$end-direction}: 0;
+                .tab-content {
+                    .tab-pane {
+                        .messages-container {
+                            max-height: unset;
+                            .message-container {
+                                .message {
+                                    padding: 16px;
+                                    flex-direction: column;
+                                    align-items: flex-end;
+                                    .message-info {
+                                        margin-bottom: 14px;
+                                        .img-container {
+                                            margin-#{$end-direction}: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.radio.radio-style-4 {
+    label {
+        cursor: pointer;
+        .img-container {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .input-label-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            #{$start-direction}: 50%;
+            @include transform(translateX(-18%));
+            span {
+                font-size: 14px;
+                color: $color-black-4;
+                font-weight: 400;
+                margin-#{$start-direction}: 6px;
+            }
+            input {
+                width: 18px;
+                height: 18px;
+                accent-color: $color-grey-31;
+                margin-top: 0;
+                &:checked {
+                    accent-color: $color-red;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    .radio.radio-style-4 {
+        label {
+            .input-label-container {
+                #{$start-direction}: 45%;
+            }
+        }
+    }
+}
